@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwao3wvceskfc"]
+
+[ext_resource type="Texture2D" uid="uid://cbasnj51ltiy3" path="res://addons/MarchingCubesTerrain/content/brush_tool.svg" id="1_aywvs"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_aywvs"]
+
+[node name="WorldBuilder" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1028.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 51.0
+grow_horizontal = 2
+
+[node name="HeightBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_aywvs")
+text = "Height"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HeightBtn"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 31.0
+texture = ExtResource("1_aywvs")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="LabelBrushSize" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "1.0"
+horizontal_alignment = 1
+
+[node name="SliderBrushSize" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+min_value = 1.0
+max_value = 25.0
+step = 0.3
+value = 1.0
+
+[node name="MMGen" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "March map regen"

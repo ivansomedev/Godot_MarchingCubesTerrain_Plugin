@@ -1,0 +1,31 @@
+[gd_resource type="ShaderMaterial" load_steps=8 format=3 uid="uid://b1i7uvoslpi3k"]
+
+[ext_resource type="Shader" uid="uid://c5i215e6b4dd4" path="res://addons/MarchingCubesTerrain/materials/StoneTriplanar.gdshader" id="1_6qwfk"]
+[ext_resource type="Texture2D" uid="uid://dkbcxsbypsb25" path="res://addons/MarchingCubesTerrain/materials/Rock058_NormalGL.jpg" id="2_reys2"]
+[ext_resource type="Texture2D" uid="uid://23ua1rb32r8t" path="res://addons/MarchingCubesTerrain/materials/Ground085_Color.jpg" id="3_5uw83"]
+[ext_resource type="Texture2D" uid="uid://b82ynylotn41k" path="res://addons/MarchingCubesTerrain/materials/Rock058_Roughness.jpg" id="4_q3b4h"]
+[ext_resource type="Texture2D" uid="uid://ox4ko07s4u6m" path="res://addons/MarchingCubesTerrain/materials/Rock058_Color.jpg" id="6_dbsh2"]
+[ext_resource type="Texture2D" uid="uid://bmvdes1es2jf8" path="res://addons/MarchingCubesTerrain/materials/Ground085_NormalGL.jpg" id="6_hy2c0"]
+[ext_resource type="Texture2D" uid="uid://cr7n4uackpf8c" path="res://addons/MarchingCubesTerrain/materials/Ground085_Roughness.jpg" id="7_reys2"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_6qwfk")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.3
+shader_parameter/uv1_blend_sharpness = 16.0
+shader_parameter/uv1_scale = Vector3(0.1, 0.1, 0.1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/top = ExtResource("3_5uw83")
+shader_parameter/top_roughness = ExtResource("7_reys2")
+shader_parameter/top_roughness_scale = 1.8000000855
+shader_parameter/top_normal = ExtResource("6_hy2c0")
+shader_parameter/top_normal_scale = 0.5
+shader_parameter/side = ExtResource("6_dbsh2")
+shader_parameter/side_roughness = ExtResource("4_q3b4h")
+shader_parameter/side_roughness_scale = 1.0
+shader_parameter/side_normal = ExtResource("2_reys2")
+shader_parameter/side_normal_scale = 1.000000807500001
